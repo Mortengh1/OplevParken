@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+            <nav>
+                <div class="navContainer">
+                    <a href="index.html"><h3 class="logo">Oplev<span> Parken</span></h3></a>
+                        <div class="menu">
+                            <a href="#">Booking</a>
+                            <a href="#">Fodboldgolf</a>
+                            <a href="#">Lege for de seje</a>
+                            <a href="#">Generelt</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+    </header>
+
+    <!--Form til booking-->
+    <article class="formContainer">
+        <div class="header">
+            <h2>BOOKING</h2>
+        </div>
+        <form id="form" class="form">
+            <section class="form_grid_1">
+                <!--NAVN -->
+                <div class="form-control">
+                    <label for="navn">Navn:</label>
+                    <input type="text" placeholder="Navn" id="navn" />
+                    <small>Navn må ikke være tomt</small>
+                </div>
+                <!--EMAIL-->
+                <div class="form-control">
+                    <label for="email">Email:</label>
+                    <input type="email" placeholder="f.eks@mail.dk" id="email" />
+                    <small>Email må ikke være tomt</small>
+                </div>
+                <!--ANTAL VOKSNE-->
+                <div class="form-control">
+                    <label>Antal Voksne:</label>
+                    <select id="antalV" name="voksne">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+            </section>
+            <section class="form_grid_2">
+                <!--NR-->
+                <div class="form-control">
+                    <label>Telefon nr.:</label>
+                    <input type="tel" placeholder="Telefon nr." id="telefon">
+                    <small>Telefon nr. må ikke være tomt.</small>
+                </div>
+                <!--DATO-->
+                <div class="form-control">
+                    <label for="dato">Dato:</label>
+                    <input type="text" placeholder="dd/mm/åååå" id="dato"/>
+                    <small>Dato må ikke være tomt.</small>
+                </div>
+                <!--ANTAL BØRN-->
+                <div class="form-control">
+                    <label for="antalB">Antal børn &#40;6-15år&#41;:</label>
+                    <select id="antalB" name="Børn">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+            </section>
+            <div class="knap">
+                <button>BOOK</button>
+            </div>
+        </form>
+    </article>
+
+    <article class="priser">
+        <h2>Priser</h2>
+            <section class="priserTekst">
+                <div class="entre">
+                    <h3>Entre:</h3>
+                    <ul>
+                        <li><pre>Voksne:          100kr./pers</pre> </li>
+                        <li><pre>Børn &#40;6-15år&#41;:   50kr./pers</pre></li>
+                        <li><pre>Børn &#40;0-5år&#41;:    Gratis</pre></li>
+                    </ul>
+                    <p><br>Grupperabat: Ved +10 personer gives 20% rabat.</p>
+                </div>
+                <div class="season">
+                    <h3>Sæsonkort:</h3>
+                    <ul>
+                        <li><pre>Voksne:          350kr./pers</pre> </li>
+                        <li><pre>Børn &#40;6-15år&#41;:   175kr./pers</pre></li>
+                        <li><pre>Børn &#40;0-5år&#41;:    Gratis</pre></li>
+                    </ul>
+                    <p><br>Sæsonkortet er personligt og inddrages ved misbrug.</p>
+                </div>
+                <div class="insti">
+                    <h3>Institutionspriser:</h3>
+                    <ul>
+                        <li>30kr./pers <br>Mandag – torsdag ved ankomst før kl. 14.00.</li>
+                    </ul>
+                    <p><br>Skal forudbestilles mindst  4 dage i forvejen.<br>
+                    Der er mulighed for betaling via EAN.
+                    </p>
+                </div>
+                <div class="sumo">
+                    <h3>Leje af sumodragter:</h3>
+                    <ul>
+                        <li><pre>1 time:   700kr.</pre></li>
+                    </ul>
+                </div>
+            </section>
+            <div class="obs">
+                <p>!OBS: Der er kun adgang for betalende gæster, og betaling
+                    skal foretages ved ankomst!</p>
+            </div>
+
+            <section class="betaling">
+                <div class="betalingInfo">
+                <p>Betaling foregår ved ekspeditionen. <br>Der vil ikke altid være folk til at tage imod dig, men udfyld en kuvert, <br>læg pengene i kuverten eller overfør beløbet med MobilePay til 10409, <br>og skriv MobilePay på kuverten.
+                <br>Put kuverten i postkassen, der sidder udvendig på skuret.
+                </p>
+                </div>
+            <div class="betalingInfo2">
+                <p>Når entréen er betalt kan alle aktiviteter benyttes hele dagen, hvis man har lyst. <br>Alle aktiviteter kan prøves til den samme pris! <br>– Dog med undtagelse af sumobrydning.</p>
+            </div>
+            </section>
+        <div class="priserImg">
+            <img src="img/booking_bold.jpg" alt="Billede af Bold">
+        </div>
+
+    </article>
+
+
+
+
+
+
+<footer>
+<p>Oplev Parken</p>
+<p>Korsvej 4</p>
+<p>8530 Hjortshøj</p>
+</footer>
+
+<!-- load jQuery library -->
+<script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+
+<!-- load JavaScript -->
+<script src="js/js.js"></script>
+
+</body>
+</html>
