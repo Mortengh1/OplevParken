@@ -18,6 +18,7 @@ header{
     height: 8vh;
     position: relative;
     overflow: hidden;
+    background-color: #0F6EB5;
 }
 
 header ul{
@@ -81,6 +82,18 @@ nav .navContainer a{
 
 
 /*BOOKING*/
+
+.bgImg{
+    background-image: url("../img/bg.jpg");
+    height: 100%;
+    width: 100%;
+
+    padding: 2%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .formContainer {
     background-color: #fff;
     border-radius: 5px;
@@ -91,6 +104,7 @@ nav .navContainer a{
     margin: auto;
     margin-top: 2%;
 }
+
 
 
 .form {
@@ -181,54 +195,117 @@ nav .navContainer a{
 }
 
 .priser{
-    color: white;
     margin: 3% 10%;
+}
+
+.priserHeader{
+    color: #fff;
+    font-size: 1.7em;
 }
 
 ul{
     list-style: none;
 }
+
 .priserTekst{
-    display: grid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.entre{
-    grid-column: 1;
-
+.priserTekst .kort{
+    width: 300px;
+    height: 370px;
+    background-color: #fff;
+    padding: 30px 20px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0.6rem 1.6rem #121212;
+    font-size: 15px;
+    color: #494c5f;
 }
 
-.season{
-    grid-column: 2;
+.priserTekst .kort a{ 
+    text-decoration: none;
 }
 
-.insti{
-    grid-column: 3;
+.priserTekst .kort ul li{
+    padding: 15px 0; 
+    border-bottom: 1px solid #121212;
+}
+
+
+.priserTekst .kort button{
+    display: block;
+    background-color: #01BE01;
+    border: 2px solid #01BE01;
+    color: #fff;
+    border-radius: 6px;
+    padding: 10px;
+    margin: auto;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.priserTekst .kort button:hover{
+    cursor: pointer;
+    background-color: #3cac4c;
+    border: 2px solid #3cac4c;
+}
+
+
+
+.prisHeader{
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.pris{
+    font-size: 1.5em;
+}
+
+.obsKort{
+    font-style: italic;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+}
+
+
+.betaling{
+    width: 915px;
+    height: 370px;
+    background-color: #fff;
+    padding: 30px 20px;
+    margin: 3% 10%;
+    border-radius: 5px;
+    box-shadow: 0 0.6rem 1.6rem #121212;
+    font-size: 15px;
+    color: #494c5f;
 }
 
 .obs{
     font-weight: bold;
     margin-top: 2%;
+    padding-left: 2%;
 }
-
-.betaling{
-    margin-top: 2%;
-    display: grid;
-}
-
-.betalingInfo{
-    grid-column: 1;
-}
-
-.betalingInfo2{
-    grid-column: 2;
-}
-
 
 .priserImg img{
     margin-top: 3%;
     max-width: 100%;
-    border: 2px solid white;
-    border-radius: 25px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+.betalingInfo{
+    padding: 2.5% 2%;
+}
+
+.betalingInfo2{
+    padding: 2.5% 2%;
 }
 
 footer{

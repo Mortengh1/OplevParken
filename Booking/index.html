@@ -22,8 +22,9 @@
             </nav>
     </header>
 
+    <article class="bgImg">
     <!--Form til booking-->
-    <article class="formContainer">
+    <section class="formContainer">
         <div class="header">
             <h2>BOOKING</h2>
         </div>
@@ -94,51 +95,57 @@
                 <button>BOOK</button>
             </div>
         </form>
-    </article>
+    </section>
+</article>
 
     <article class="priser">
-        <h2>Priser</h2>
+        <h2 class="priserHeader">Priser</h2>
             <section class="priserTekst">
-                <div class="entre">
-                    <h3>Entre:</h3>
+                <div class="kort entre">
+                    <h2 class="prisHeader">Entre</h2>
                     <ul>
-                        <li><pre>Voksne:          100kr./pers</pre> </li>
-                        <li><pre>Børn &#40;6-15år&#41;:   50kr./pers</pre></li>
-                        <li><pre>Børn &#40;0-5år&#41;:    Gratis</pre></li>
-                    </ul>
-                    <p><br>Grupperabat: Ved +10 personer gives 20% rabat.</p>
-                </div>
-                <div class="season">
-                    <h3>Sæsonkort:</h3>
-                    <ul>
-                        <li><pre>Voksne:          350kr./pers</pre> </li>
-                        <li><pre>Børn &#40;6-15år&#41;:   175kr./pers</pre></li>
-                        <li><pre>Børn &#40;0-5år&#41;:    Gratis</pre></li>
-                    </ul>
-                    <p><br>Sæsonkortet er personligt og inddrages ved misbrug.</p>
-                </div>
-                <div class="insti">
-                    <h3>Institutionspriser:</h3>
-                    <ul>
-                        <li>30kr./pers <br>Mandag – torsdag ved ankomst før kl. 14.00.</li>
-                    </ul>
-                    <p><br>Skal forudbestilles mindst  4 dage i forvejen.<br>
-                    Der er mulighed for betaling via EAN.
-                    </p>
-                </div>
-                <div class="sumo">
-                    <h3>Leje af sumodragter:</h3>
-                    <ul>
-                        <li><pre>1 time:   700kr.</pre></li>
-                    </ul>
-                </div>
-            </section>
-            <div class="obs">
-                <p>!OBS: Der er kun adgang for betalende gæster, og betaling
-                    skal foretages ved ankomst!</p>
+                        <li><pre>Voksne:         <span class="pris">100kr.</span>/pers</pre></li>
+                        <li><pre>Børn &#40;6-15år&#41;:  <span class="pris">50kr.</span>/pers</pre></li>
+                        <li><pre>Børn &#40;0-5år&#41;:   <span class="pris">Gratis</span></pre></li>
+                    </ul> 
+                    <a href="booking.html"><button>BOOK</button></a>
             </div>
+                </div>
+
+                <div class="kort season">
+                    <h2 class="prisHeader">Sæson</h2>
+                    <ul>
+                        <li><pre>Voksne:         <span class="pris">350kr.</span>/pers</pre></li>
+                        <li><pre>Børn &#40;6-15år&#41;:  <span class="pris">175kr.</span>/pers</pre></li>
+                        <li><pre>Børn &#40;0-5år&#41;:   <span class="pris">Gratis</span></pre></li>
+                    </ul> 
+                    <a href="booking.html"><button>BOOK</button></a>
+            </div>
+                </div>
+
+                <div class="kort insti">
+                    <h2 class="prisHeader">Institutionspriser</h2>
+                    <ul>
+                        <li><pre>Mandag-torsdag:   <span class="pris">30kr.</span>/pers</pre></li>
+                        <li>Ankomst før kl 14</li>
+                    </ul> 
+                    <p class="obsKort">
+                        Skal forudbestilles mindst 4 dage i forvejen.
+                        <br>Der er mulighed for betaling via EAN.
+                    </p>
+                    <a href="booking.html"><button>BOOK</button></a>
+            </div>
+                </div>
+                
+            </section>
+
+            
 
             <section class="betaling">
+                <div class="obs">
+                    <p>!OBS: Der er kun adgang for betalende gæster, og betaling
+                        skal foretages ved ankomst!</p>
+                </div>
                 <div class="betalingInfo">
                 <p>Betaling foregår ved ekspeditionen. <br>Der vil ikke altid være folk til at tage imod dig, men udfyld en kuvert, <br>læg pengene i kuverten eller overfør beløbet med MobilePay til 10409, <br>og skriv MobilePay på kuverten.
                 <br>Put kuverten i postkassen, der sidder udvendig på skuret.
@@ -148,6 +155,7 @@
                 <p>Når entréen er betalt kan alle aktiviteter benyttes hele dagen, hvis man har lyst. <br>Alle aktiviteter kan prøves til den samme pris! <br>– Dog med undtagelse af sumobrydning.</p>
             </div>
             </section>
+            
         <div class="priserImg">
             <img src="img/booking_bold.jpg" alt="Billede af Bold">
         </div>
