@@ -5,7 +5,7 @@ body {
   font-family: sans-serif;
 }
 
-.container {
+.boxContainer {
   width: 1280px;
 
   margin: 70px auto 0;
@@ -14,7 +14,7 @@ body {
   flex-wrap: wrap;
 }
 
-.container .box {
+.boxContainer .box {
   position: relative;
   width: 300px;
   height: 300px;
@@ -24,22 +24,23 @@ body {
   display: inline-block;
 }
 
-.container .box .imgBox {
+.boxContainer .box .imgBox {
   position: relative;
   overflow: hidden;
 }
 
-.container .box .imgBox img {
+.boxContainer .box .imgBox img {
   max-width: 100%;
   transition: transform 2s;
 }
 
-.container .box:hover .imgBox img {
+.boxContainer .box:hover .imgBox img {
   transform: scale(1.2);
 }
+
 /* transform: scaleY(0); lukker indholdet ned på Y aksen og åbner det igen i hover effekt med transform: scaleY(1); 
 dette galleri er lavet af Frederik*/
-.container .box .details {
+.boxContainer .box .details {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -49,11 +50,12 @@ dette galleri er lavet af Frederik*/
   transform: scaleY(0);
   transition: transform 0.5s;
 }
-.container .box:hover .details {
+
+.boxContainer .box:hover .details {
   transform: scaleY(1);
 }
 
-.container .box .details .content {
+.boxContainer .box .details .content {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -62,14 +64,14 @@ dette galleri er lavet af Frederik*/
   color: #fff;
 }
 
-.container .box .details .content h2 {
+.boxContainer .box .details .content h2 {
   margin: 0;
   padding: 0;
   font-size: 20px;
   color: #ff0;
 }
 
-.container .box .details .content p {
+.boxContainer .box .details .content p {
   margin: 10px 0 0;
   padding: 0;
 }
