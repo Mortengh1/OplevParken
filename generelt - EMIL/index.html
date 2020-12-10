@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Poppins&display=swap');
+        </style>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
+     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <title>tester nu</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="navContainer">
+                <a href="index.html">
+                    <h3 class="logo">Oplev<span> Parken</span></h3>
+                </a>
+                <div class="menu">
+                    <a href="#">Booking</a>
+                    <a href="#">Fodboldgolf</a>
+                    <a href="#">Lege for de seje</a>
+                    <a href="#">Generelt</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+<main class="containerj">
+    <section class="card">
+        <div>
+            <div class="header">
+                <h2>ÅBNINGSTIDER</h2>
+            </div>
+            <ul> <pre>
+                <li><pre><b>Mandag:</b>  09.00-20.00</pre></li>
+                <li><pre><b>Tirsdag:</b> 09.00-20.00</pre></li>
+                <li><pre><b>Onsdag:</b>  09.00-20.00</pre></li>
+                <li><pre><b>Torsdag:</b> 09.00-20.00</pre></li>
+                <li><pre><b>Fredag:</b>  09.00-20.00</pre></li>
+                <li><pre><b>Lørdag:</b>  09.00-20.00</pre></li>
+                <li><pre><b>Søndag:</b>  09.00-20.00</pre></li>
+            </ul>
+            <section id="map1"></section>
+                <script>
+                    mapboxgl.accessToken = 'pk.eyJ1IjoibmFnZ29yYXRoIiwiYSI6ImNrZnFraHBkNTBidXYydG8wcnNpd2diY2wifQ.XACaF-Waep-sSnedONVNlg';
+                    var map = new mapboxgl.Map({
+                        container: 'map1', // container id
+                        style: 'mapbox://styles/naggorath/cki7bew3vadtp19qu9hs2uj5d', // style URL
+                        center: [10.238, 56.2736], // starting position [lng, lat]
+
+                        zoom: 17.14 // starting zoom
+                    });
+                </script>
+        </div>
+        <div>
+        <div class="header">
+            <h2>VEJROVERSIGT</h2>
+        </div>
+        <ul> <pre>
+            <li><pre><b>Mandag:</b>  09.00-20.00</pre></li>
+            <li><pre><b>Tirsdag:</b> 09.00-20.00</pre></li>
+            <li><pre><b>Onsdag:</b>  09.00-20.00</pre></li>
+            <li><pre><b>Torsdag:</b> 09.00-20.00</pre></li>
+            <li><pre><b>Fredag:</b>  09.00-20.00</pre></li>
+            <li><pre><b>Lørdag:</b>  09.00-20.00</pre></li>
+            <li><pre><b>Søndag:</b>  09.00-20.00</pre></li>
+
+    <!-- herunder kan du se vejroplysningerne -->
+    <div id="result"></div>
+
+<script>
+    
+/*
+@datasæt hentes sådan:
+http://api.openweathermap.org/data/2.5/weather?
+q=Bendstrup,8530
+&lang=da
+&units=metric
+&appid=201d090c9cceacfc8931df89310ebfbb
+*/
+    
+$(document).ready(function() {
+
+    // get the weather data via query URI
+    
+    fetch("http://api.openweathermap.org/data/2.5/weather?q=bendstrup,8530&lang=da&units=metric&appid=c9e05832a1418b95b7b66c07459d781a").then(response => {
+        return response.json();
+    }).then(data => {
+
+        // Work with JSON data here
+        console.log(data); // show what's in the json
+        
+        /*
+        --> Prøv selv: 
+        --> Tilføj oplysninger om solopgang.
+        */
+
+        // append = da. tilføj (noget tilføjes et element med id="result"
+        $('#result').append(
+
+            // tilføjer ("append") en div til vejroplysninger
+            '<div class="weatherInfo">' +
+
+            // tilføjer bynavn
+            '<h1> ' + data.name + ' </h1>' +
+
+            // tilføjer en beskrivelse af vejret lige nu
+            '<h2>Vejr: ' + data.weather[0].description + '</h2>' +
+            '<h2>Temp: ' + data.main.temp +'°'+ '</h2>' +
+'<h2>Vindhastighed: ' + data.wind.speed +'m/s'+ '</h2>' +
+            // tilføjer vejrsymbol
+            '<figure>' +
+            '<img src="http://openweathermap.org/img/w/' + data.weather[0].icon + '.png" alt="Vejrsymbol">' +
+            '</figure>' +
+
+            // afslutter #weatherInfo taggen
+            '</div>'); // .append til #result slut
+
+        // here are the icons: https://openweathermap.org/weather-conditions 
+
+    }).catch(err => {
+        // Do something for an error here
+        console.log('There was an error ...');
+    });
+
+}); // document ready end
+</script>
+
+        </ul>
+    </div>
+</div>
+    </section>
+
+    <section class="card" data-aos="fade-left">
+        <div>
+            <div class="header">
+                <h2>ÅBNINGSTIDER</h2>
+            </div>
+            <ul> <pre>
+                <li><pre><b>Mandag:</b>  09.00-20.00</pre></li>
+                <li><pre><b>Tirsdag:</b> 09.00-20.00</pre></li>
+                <li><pre><b>Onsdag:</b>  09.00-20.00</pre></li>
+                <li><pre><b>Torsdag:</b> 09.00-20.00</pre></li>
+                <li><pre><b>Fredag:</b>  09.00-20.00</pre></li>
+                <li><pre><b>Lørdag:</b>  09.00-20.00</pre></li>
+                <li><pre><b>Søndag:</b>  09.00-20.00</pre></li>
+            </ul>
+        </div>
+        <img src="img/lag5.jpg" alt="">
+    </section>
+
+
+    <section class="card" data-aos="fade-right">
+        <img src="img/lag5.jpg" alt="">
+        <div>
+            <div class="header">
+                <h2>ÅBNINGSTIDER</h2>
+            </div>
+            <ul> <pre>
+                <li><pre><b>Mandag:</b>  09.00-20.00</pre></li>
+                <li><pre><b>Tirsdag:</b> 09.00-20.00</pre></li>
+                <li><pre><b>Onsdag:</b>  09.00-20.00</pre></li>
+                <li><pre><b>Torsdag:</b> 09.00-20.00</pre></li>
+                <li><pre><b>Fredag:</b>  09.00-20.00</pre></li>
+                <li><pre><b>Lørdag:</b>  09.00-20.00</pre></li>
+                <li><pre><b>Søndag:</b>  09.00-20.00</pre></li>
+            </ul>
+        </div>
+        </div>
+    </section>
+
+
+    <section class="card"data-aos="fade-left">
+        <div>
+            <div class="header">
+                <h2>ÅBNINGSTIDER</h2>
+            </div>
+            <ul> <pre>
+                <li><pre><b>Mandag:</b>  09.00-20.00</pre></li>
+                <li><pre><b>Tirsdag:</b> 09.00-20.00</pre></li>
+                <li><pre><b>Onsdag:</b>  09.00-20.00</pre></li>
+                <li><pre><b>Torsdag:</b> 09.00-20.00</pre></li>
+                <li><pre><b>Fredag:</b>  09.00-20.00</pre></li>
+                <li><pre><b>Lørdag:</b>  09.00-20.00</pre></li>
+                <li><pre><b>Søndag:</b>  09.00-20.00</pre></li>
+            </ul>
+        </div>
+        <img src="img/lag5.jpg" alt="">
+    </section>
+
+    <section class="card"data-aos="fade-right">
+        <img src="img/lag5.jpg" alt="">
+        <div>
+            <div class="header">
+                <h2>ÅBNINGSTIDER</h2>
+            </div>
+            <ul> <pre>
+                <li><pre><b>Mandag:</b>  09.00-20.00</pre></li>
+                <li><pre><b>Tirsdag:</b> 09.00-20.00</pre></li>
+                <li><pre><b>Onsdag:</b>  09.00-20.00</pre></li>
+                <li><pre><b>Torsdag:</b> 09.00-20.00</pre></li>
+                <li><pre><b>Fredag:</b>  09.00-20.00</pre></li>
+                <li><pre><b>Lørdag:</b>  09.00-20.00</pre></li>
+                <li><pre><b>Søndag:</b>  09.00-20.00</pre></li>
+            </ul>
+        </div>
+    </section>
+
+</main>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<footer>
+    <p>Oplev Parken</p>
+    <p>Korsvej 4</p>
+    <p>8530 Hjortshøj</p>
+</footer>
+
+<script>
+    AOS.init({
+        offset: 400,
+        duration: 1000
+    });
+</script>
+</body>
+</html>
